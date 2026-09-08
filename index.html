@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="ATELIER NØRD imagine et transforme des intérieurs à Lille et sur la Côte d’Opale. Rénovation, conception d’espaces et menuiserie sur mesure."
+    />
+    <meta name="theme-color" content="#ece8df" />
+    <title>ATELIER NØRD — Architecture intérieure &amp; rénovation à Lille</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>document.documentElement.classList.add('js');</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <div class="intro" data-intro aria-label="Introduction ATELIER NØRD">
+      <p class="intro__wordmark" aria-hidden="true">ATELIER NØRD</p>
+      <button class="intro__skip" type="button" data-intro-skip>Passer l’introduction</button>
+    </div>
+
+    <header class="site-header" data-header>
+      <div class="site-header__inner">
+        <a class="wordmark" href="index.html" aria-label="ATELIER NØRD — Accueil">ATELIER NØRD</a>
+
+        <nav class="primary-nav" aria-label="Navigation principale">
+          <a href="#projets">Projets</a>
+          <a href="#approche">Approche</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+          data-menu-toggle
+        >
+          <span aria-hidden="true">Menu</span>
+          <span class="menu-toggle__icon" aria-hidden="true"><i></i><i></i></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" data-mobile-menu>
+      <div class="mobile-menu__top">
+        <p class="mobile-menu__label">Navigation</p>
+        <button class="mobile-menu__close" type="button" aria-label="Fermer le menu" data-menu-close>
+          <span aria-hidden="true">Fermer</span>
+          <span class="mobile-menu__close-mark" aria-hidden="true"></span>
+        </button>
+      </div>
+      <nav class="mobile-menu__nav" aria-label="Navigation mobile">
+        <a href="#projets">Projets <span>01</span></a>
+        <a href="#approche">Approche <span>02</span></a>
+        <a href="#contact">Contact <span>03</span></a>
+      </nav>
+      <div class="mobile-menu__footer">
+        <a href="mailto:bonjour@atelier-nord.example">bonjour@atelier-nord.example</a>
+        <p>Lille — France</p>
+      </div>
+    </div>
+
+    <main id="contenu">
+      <section class="hero" aria-labelledby="hero-title">
+        <video
+          class="hero__media"
+          data-hero-video
+          width="1920"
+          height="1080"
+          poster="assets/images/hero-atelier-nord.jpg"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="assets/images/modern-home-interior-wide-shot-2026-01-21-02-38-59-utc.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__veil" aria-hidden="true"></div>
+        <div class="hero__content page-grid">
+          <p class="eyebrow hero__eyebrow">Lille — France</p>
+          <div class="hero__title-wrap">
+            <p class="hero__brand" data-hero-line>ATELIER NØRD</p>
+            <h1 id="hero-title">
+              <span data-hero-line>Architecture intérieure</span>
+              <span data-hero-line>&amp; rénovation</span>
+            </h1>
+          </div>
+          <div class="hero__bottom" data-hero-line>
+            <p>Révéler ce que l’espace peut devenir.</p>
+            <a class="text-link text-link--light" href="#atelier">Découvrir l’atelier <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="manifesto section" id="atelier" aria-labelledby="manifesto-title">
+        <div class="page-grid manifesto__grid">
+          <div class="manifesto__copy">
+            <p class="eyebrow" data-reveal>L’atelier</p>
+            <h2 id="manifesto-title" class="display-title" data-reveal>
+              Transformer un lieu,<br />
+              sans effacer ce qui le rend unique.
+            </h2>
+            <div class="manifesto__body" data-reveal>
+              <p>
+                ATELIER NØRD conçoit des intérieurs précis, lumineux et durables. Nous intervenons
+                sur des maisons, des appartements et des espaces à réinventer, avec une attention
+                particulière portée aux usages, aux matières et à la lumière.
+              </p>
+              <ul class="detail-list" aria-label="Domaines d’intervention">
+                <li>Architecture intérieure</li>
+                <li>Rénovation</li>
+                <li>Conception d’espaces</li>
+              </ul>
+            </div>
+          </div>
+          <figure class="manifesto__media media-reveal" data-reveal>
+            <img
+              src="assets/images/cozy-interior-with-sunlight-streaming-through-wind-2026-03-10-02-04-53-utc.jpg"
+              width="1600"
+              height="2200"
+              alt="Pièce de vie lumineuse ouverte sur les arbres"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="projects section" id="projets" aria-labelledby="projects-title">
+        <div class="projects__heading page-grid">
+          <p class="eyebrow" data-reveal>Réalisations sélectionnées</p>
+          <h2 id="projects-title" class="display-title" data-reveal>Des lieux pensés<br />pour être habités.</h2>
+        </div>
+
+        <div class="projects__list">
+          <article class="project project--maison-l">
+            <a class="project__link" href="projets/maison-l.html" aria-labelledby="maison-l-title">
+              <figure class="project__media media-reveal" data-reveal>
+                <img
+                  src="assets/images/modern-home-interior-with-dining-table-and-kitchen-2026-03-18-11-05-03-utc.jpg"
+                  width="2400"
+                  height="1600"
+                  alt="Pièce de vie de la Maison L avec table en bois et cuisine ouverte"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="project__meta" data-reveal>
+                <p class="project__number">01</p>
+                <div>
+                  <h3 id="maison-l-title">MAISON L</h3>
+                  <p>Lille — 2026</p>
+                  <p>Rénovation d’une maison de ville</p>
+                </div>
+                <span class="project__cta">Voir le projet <span aria-hidden="true">↗</span></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="project project--appartement-v project--upcoming">
+            <div class="project__link">
+              <div class="project__meta" data-reveal>
+                <p class="project__number">02</p>
+                <div>
+                  <h3 id="appartement-v-title">APPARTEMENT V</h3>
+                  <p>Lille — 2025</p>
+                  <p>Rénovation d’un appartement contemporain</p>
+                </div>
+                <span class="project__cta">Projet à venir</span>
+              </div>
+              <figure class="project__media project__media--upcoming media-reveal" data-reveal aria-label="Projet Appartement V à venir">
+                <span>Projet<br />à venir</span>
+              </figure>
+            </div>
+          </article>
+
+          <article class="project project--dunes project--upcoming">
+            <div class="project__link">
+              <figure class="project__media project__media--upcoming media-reveal" data-reveal aria-label="Projet Maison des Dunes à venir">
+                <span>Projet<br />à venir</span>
+              </figure>
+              <div class="project__meta" data-reveal>
+                <p class="project__number">03</p>
+                <div>
+                  <h3 id="dunes-title">MAISON DES DUNES</h3>
+                  <p>Le Touquet — 2026</p>
+                  <p>Maison de vacances</p>
+                </div>
+                <span class="project__cta">Projet à venir</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project project--studio-m project--upcoming">
+            <div class="project__link">
+              <figure class="project__media project__media--upcoming media-reveal" data-reveal aria-label="Projet Studio M à venir">
+                <span>Projet<br />à venir</span>
+              </figure>
+              <div class="project__meta" data-reveal>
+                <p class="project__number">04</p>
+                <div>
+                  <h3 id="studio-m-title">STUDIO M</h3>
+                  <p>Lille — 2024</p>
+                  <p>Optimisation d’un petit espace</p>
+                </div>
+                <span class="project__cta">Projet à venir</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <aside class="interlude" aria-label="Citation de l’atelier">
+        <figure class="interlude__media media-reveal" data-reveal>
+          <img
+            src="assets/images/interlude-lumiere.jpg"
+            width="1800"
+            height="1200"
+            alt="Salon lumineux avec cheminée et mur terracotta"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <p class="interlude__quote" data-reveal>
+          Un intérieur juste ne se remarque pas toujours.<br />Il se ressent, au quotidien.
+        </p>
+      </aside>
+
+      <section class="comparison-section section" aria-labelledby="comparison-title">
+        <div class="page-grid comparison-section__heading">
+          <p class="eyebrow" data-reveal>Transformation</p>
+          <div data-reveal>
+            <h2 id="comparison-title" class="display-title">Faire entrer la lumière,<br />clarifier les usages.</h2>
+            <p class="comparison-section__copy">
+              Pour MAISON L, les volumes ont été ouverts avec mesure afin de relier les pièces de
+              vie, révéler la lumière existante et redonner une place centrale aux matières
+              naturelles.
+            </p>
+          </div>
+        </div>
+
+        <div class="comparison-wrap" data-reveal>
+          <div class="comparison" data-comparison style="--position: 48%">
+            <img
+              class="comparison__image"
+              src="assets/images/apre%CC%80s.png"
+              width="2400"
+              height="1600"
+              alt="Après rénovation : pièce de vie lumineuse avec meuble sur mesure et cheminée"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="comparison__before" data-comparison-before>
+              <img
+                src="assets/images/avant.png"
+                width="2400"
+                height="1600"
+                alt="Avant rénovation : pièce de vie classique avec cheminée"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <input
+              class="comparison__range"
+              type="range"
+              min="0"
+              max="100"
+              value="48"
+              aria-label="Comparer l’état avant et après rénovation de la Maison L"
+              aria-valuetext="Avant 48 %, après 52 %"
+              data-comparison-range
+            />
+            <div class="comparison__divider" aria-hidden="true">
+              <span class="comparison__handle">↔</span>
+            </div>
+            <span class="comparison__label comparison__label--before">Avant</span>
+            <span class="comparison__label comparison__label--after">Après</span>
+          </div>
+          <p class="comparison__instruction">Faites glisser le séparateur pour comparer l’état initial et le projet final.</p>
+        </div>
+      </section>
+
+      <section class="approach section section--dark" id="approche" aria-labelledby="approach-title">
+        <div class="page-grid">
+          <div class="approach__intro">
+            <p class="eyebrow eyebrow--light" data-reveal>Notre approche</p>
+            <h2 id="approach-title" class="display-title" data-reveal>Un projet se construit<br />d’abord par l’écoute.</h2>
+          </div>
+          <ol class="approach__steps">
+            <li data-reveal>
+              <p class="approach__number">01</p>
+              <h3>Écouter</h3>
+              <p>Comprendre le lieu, les habitudes, les contraintes et ce qui doit vraiment changer.</p>
+            </li>
+            <li data-reveal>
+              <p class="approach__number">02</p>
+              <h3>Concevoir</h3>
+              <p>Donner une direction claire aux volumes, à la circulation, à la lumière et aux matières.</p>
+            </li>
+            <li data-reveal>
+              <p class="approach__number">03</p>
+              <h3>Transformer</h3>
+              <p>Coordonner les interventions avec précision pour faire avancer le projet sans perdre l’intention initiale.</p>
+            </li>
+            <li data-reveal>
+              <p class="approach__number">04</p>
+              <h3>Habiter</h3>
+              <p>Créer un intérieur durable, simple à vivre et suffisamment singulier pour rester juste dans le temps.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="figures section" aria-labelledby="figures-title">
+        <div class="page-grid figures__heading">
+          <p class="eyebrow" data-reveal>L’atelier en quelques repères</p>
+          <h2 id="figures-title" class="sr-only">Chiffres de l’atelier</h2>
+        </div>
+        <dl class="figures__list page-grid">
+          <div data-reveal><dt>32</dt><dd>espaces transformés</dd></div>
+          <div data-reveal><dt>14</dt><dd>années de pratique</dd></div>
+          <div data-reveal><dt>4</dt><dd>savoir-faire réunis</dd></div>
+          <div data-reveal><dt>1</dt><dd>même exigence</dd></div>
+        </dl>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact__media" aria-hidden="true">
+          <img src="assets/images/contact-atelier-nord.jpg" width="4240" height="2827" alt="" loading="lazy" decoding="async" />
+        </div>
+        <div class="contact__content page-grid">
+          <p class="eyebrow eyebrow--light" data-reveal>Un projet en tête ?</p>
+          <div class="contact__main" data-reveal>
+            <h2 id="contact-title">Parlons de<br />votre espace.</h2>
+            <p>
+              Une maison à repenser, un appartement à transformer ou un lieu à faire évoluer ?
+              Échangeons autour de votre projet.
+            </p>
+            <a class="contact__email" href="mailto:bonjour@atelier-nord.example">bonjour@atelier-nord.example <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="contact__meta" data-reveal>
+            <p>Lille — France</p>
+            <p>Sur rendez-vous</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__top">
+        <a class="wordmark" href="index.html">ATELIER NØRD</a>
+        <nav aria-label="Navigation de pied de page">
+          <a href="#projets">Projets</a>
+          <a href="#approche">Approche</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 ATELIER NØRD</p>
+        <p>Projet conceptuel — entreprise fictive — réalisation portfolio.</p>
+        <p>Les coordonnées, chiffres et réalisations présentés sont fictifs.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
