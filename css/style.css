@@ -157,6 +157,7 @@ ol {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
+  min-height: 44px;
   padding-bottom: 0.25rem;
   border-bottom: 1px solid currentColor;
   font-size: 0.74rem;
@@ -175,6 +176,9 @@ ol {
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -222,6 +226,9 @@ ol {
 
 .primary-nav a {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   padding-block: 0.8rem;
   font-size: 0.68rem;
   font-weight: 700;
@@ -339,6 +346,7 @@ ol {
 .hero__content {
   position: relative;
   z-index: 1;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto 1fr auto;
   min-height: 100svh;
   padding-top: clamp(7rem, 16vh, 13rem);
@@ -508,33 +516,6 @@ html.js [data-hero-line]:nth-child(3) {
   background: var(--charcoal);
 }
 
-.project__media--upcoming {
-  display: grid;
-  place-items: center;
-  padding: 1.5rem;
-  color: var(--paper);
-  background: #85847e;
-}
-
-.project__media--upcoming::before {
-  position: absolute;
-  inset: 1rem;
-  content: "";
-  border: 1px solid rgba(246, 244, 239, 0.38);
-}
-
-.project__media--upcoming span {
-  position: relative;
-  z-index: 2;
-  font-family: var(--serif);
-  font-size: clamp(2.15rem, 4.5vw, 5.25rem);
-  font-weight: 500;
-  letter-spacing: -0.07em;
-  line-height: 0.78;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .project__media img {
   height: 100%;
   object-fit: cover;
@@ -576,6 +557,12 @@ html.js [data-hero-line]:nth-child(3) {
   line-height: 1.55;
 }
 
+.project__meta .project__universe {
+  margin-top: 0.6rem;
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .project__cta {
   align-self: end;
   padding-bottom: 0.3rem;
@@ -592,11 +579,6 @@ html.js [data-hero-line]:nth-child(3) {
   word-spacing: 0.18em;
 }
 
-.project--upcoming .project__cta {
-  color: var(--stone);
-  border-color: var(--line);
-}
-
 .project--maison-l .project__link {
   grid-template-columns: minmax(0, 1fr);
 }
@@ -607,8 +589,9 @@ html.js [data-hero-line]:nth-child(3) {
 }
 
 .project--maison-l .project__meta {
-  width: min(100%, 980px);
-  margin-left: clamp(1rem, 10vw, 13rem);
+  --project-meta-indent: clamp(1rem, 10vw, 13rem);
+  width: min(calc(100% - var(--project-meta-indent)), 980px);
+  margin-left: var(--project-meta-indent);
 }
 
 .project--appartement-v .project__link {
@@ -626,12 +609,6 @@ html.js [data-hero-line]:nth-child(3) {
   align-self: center;
 }
 
-.project--appartement-v .project__cta {
-  grid-column: 2;
-  justify-self: start;
-  margin-top: 2rem;
-}
-
 .project--dunes .project__link {
   grid-template-columns: minmax(0, 1fr);
 }
@@ -643,6 +620,7 @@ html.js [data-hero-line]:nth-child(3) {
 }
 
 .project--dunes .project__meta {
+  grid-template-columns: 3rem minmax(0, 1fr);
   width: min(100%, 700px);
   margin-top: -3.5rem;
   margin-left: clamp(1rem, 8vw, 10rem);
@@ -662,12 +640,6 @@ html.js [data-hero-line]:nth-child(3) {
 .project--studio-m .project__meta {
   grid-template-columns: 2.2rem minmax(0, 1fr);
   align-self: center;
-}
-
-.project--studio-m .project__cta {
-  grid-column: 2;
-  justify-self: start;
-  margin-top: 2rem;
 }
 
 /* Interlude */
@@ -1004,6 +976,7 @@ html.js [data-hero-line]:nth-child(3) {
   display: inline-flex;
   align-items: center;
   gap: 0.85rem;
+  min-height: 44px;
   margin-top: clamp(2rem, 4vw, 4rem);
   padding-bottom: 0.4rem;
   border-bottom: 1px solid currentColor;
@@ -1062,6 +1035,12 @@ html.js [data-hero-line]:nth-child(3) {
   text-transform: uppercase;
 }
 
+.site-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
 .site-footer__bottom {
   gap: 1.5rem;
   padding-top: 1.2rem;
@@ -1092,6 +1071,25 @@ html.js [data-hero-line]:nth-child(3) {
   grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.55fr);
   gap: clamp(2rem, 8vw, 10rem);
   padding-bottom: clamp(3rem, 7vw, 7rem);
+}
+
+.project-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  margin-bottom: clamp(1rem, 2vw, 2rem);
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid currentColor;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-back span {
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .project-hero h1 {
@@ -1422,7 +1420,7 @@ html.js .media-reveal.is-revealed::after {
   }
 
   .project--maison-l .project__meta {
-    margin-left: clamp(1rem, 5vw, 3.5rem);
+    --project-meta-indent: clamp(1rem, 5vw, 3.5rem);
   }
 
   .project--dunes .project__meta {
@@ -1626,6 +1624,9 @@ html.js .media-reveal.is-revealed::after {
   }
 
   .mobile-menu__footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
     text-transform: none;
   }
 
@@ -1656,7 +1657,7 @@ html.js .media-reveal.is-revealed::after {
   .project-hero__content,
   .project-intro__grid,
   .project-facts .page-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .manifesto__copy {
@@ -1728,16 +1729,14 @@ html.js .media-reveal.is-revealed::after {
     font-size: clamp(2.3rem, 10vw, 3.5rem);
   }
 
-  .project__cta,
-  .project--appartement-v .project__cta,
-  .project--studio-m .project__cta {
+  .project__cta {
     grid-column: 2;
     justify-self: start;
     margin-top: 1.15rem;
   }
 
   .project--dunes .project__meta {
-    margin-top: 0;
+    margin: 0;
   }
 
   .interlude {
@@ -1936,6 +1935,20 @@ html.js .media-reveal.is-revealed::after {
 
   .next-project h2 {
     font-size: clamp(4rem, 18vw, 7rem);
+  }
+}
+
+@media (max-width: 360px) {
+  .display-title {
+    font-size: 2.6rem;
+  }
+
+  .hero h1 {
+    font-size: 3.4rem;
+  }
+
+  .project h3 {
+    font-size: 2.1rem;
   }
 }
 

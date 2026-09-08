@@ -173,6 +173,8 @@
       if (!range) return;
 
       let activePointerId = null;
+      let pointerStart = null;
+      let isDragging = false;
 
       const updateComparison = () => {
         const value = Number(range.value);
@@ -189,21 +191,51 @@
 
       const finishPointer = (event) => {
         if (event.pointerId !== activePointerId) return;
-        comparison.releasePointerCapture?.(event.pointerId);
+        if (isDragging) comparison.releasePointerCapture?.(event.pointerId);
         activePointerId = null;
+        pointerStart = null;
+        isDragging = false;
+      };
+
+      const beginDrag = (event) => {
+        isDragging = true;
+        comparison.setPointerCapture?.(event.pointerId);
+        updateFromPointer(event);
       };
 
       range.addEventListener('input', updateComparison);
       comparison.addEventListener('pointerdown', (event) => {
         if (event.pointerType === 'mouse' && event.button !== 0) return;
         activePointerId = event.pointerId;
-        comparison.setPointerCapture?.(event.pointerId);
-        updateFromPointer(event);
+        pointerStart = { x: event.clientX, y: event.clientY };
+
+        if (event.pointerType !== 'touch') beginDrag(event);
       });
       comparison.addEventListener('pointermove', (event) => {
-        if (event.pointerId === activePointerId) updateFromPointer(event);
+        if (event.pointerId !== activePointerId) return;
+
+        if (!isDragging && pointerStart) {
+          const horizontalDistance = event.clientX - pointerStart.x;
+          const verticalDistance = event.clientY - pointerStart.y;
+
+          if (Math.abs(horizontalDistance) < 8 && Math.abs(verticalDistance) < 8) return;
+
+          if (Math.abs(verticalDistance) >= Math.abs(horizontalDistance)) {
+            activePointerId = null;
+            pointerStart = null;
+            return;
+          }
+
+          beginDrag(event);
+          return;
+        }
+
+        if (isDragging) updateFromPointer(event);
       });
-      comparison.addEventListener('pointerup', finishPointer);
+      comparison.addEventListener('pointerup', (event) => {
+        if (event.pointerId === activePointerId && isDragging) updateFromPointer(event);
+        finishPointer(event);
+      });
       comparison.addEventListener('pointercancel', finishPointer);
       updateComparison();
     });
